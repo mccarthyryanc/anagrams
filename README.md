@@ -1,17 +1,11 @@
 # Anagrams
 
-A script to generate lists of anagrams by using the Python dicts and the Fundamental Theorem of Arithmetic. To keep output simple, anagrams with words that are at least 4 letters long and at least as many anagrams as there are letters are output.
+A script to generate lists of anagrams by using Python dicts and the Fundamental Theorem of Arithmetic. To keep output simple, anagrams with words that are at least 4 letters long and at least as many anagrams as there are letters are output.
 
 
 ## Algorithm
 
-Via the Fundamental Theorem of Arithmetic, we know that any integer can be
-uniquely factored into primes. An integer can be constructed from a word by
-representing each letter in an alphabet as a prime and then multiplying
-these letters. Because multiplication is order independent, words that are
-formed with the same letters will have the same unique integer
-representation. This is use to find anagrams based off an input dictionary
-of words.
+Via the Fundamental Theorem of Arithmetic, we know that any integer can be uniquely factored into primes. An integer can be constructed from a word by representing each letter in an alphabet as a prime and then multiplying these letters. Because multiplication is order independent, words that are formed with the same letters will have the same unique integer representation: This creates a unique key for an anagram set. This is use to find anagrams based off an input dictionary of words.
 
 ## Dependencies
 
@@ -20,9 +14,9 @@ of words.
 
 ## Usage
 
-This was tested on Ubuntu 16.04 using dictionaries found in `/usr/share/dict`. Because it pull all characters from the Unicode 'Ll' category, it should work many different languages.
+This was tested on Ubuntu 16.04 using dictionaries found in `/usr/share/dict`. Because it pulls all characters from the Unicode 'Ll' category, it should work many different languages.
 
-By default output uses english with UTF-8 encoding:
+By default output uses english:
 
 ```bash
 ./anagrams.py
@@ -128,4 +122,4 @@ adentarmos, adentramos, adormentas, amedrontas, amestrando, amontardes, antedarm
 amestrarei, arremateis, arremetais, arremetias, estreariam, estremaria, mastrearei, rematareis, reteimaras, retesariam
 ```
 
-Wow! Looks like Portuguese has lots of anagrams! TODO: compare different languages for the distributed of anagrams over word length.
+Wow! Looks like Portuguese has lots of anagrams! TODO: compare different languages for the distribution of anagram counts over word length.
